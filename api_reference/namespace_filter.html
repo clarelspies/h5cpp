@@ -1,0 +1,285 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Namespace hdf5::filter &#8212; h5cpp 0.3.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.3.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Namespace hdf5::node" href="namespace_node.html" />
+    <link rel="prev" title="Namespace hdf5::file" href="namespace_file.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="namespace_node.html" title="Namespace hdf5::node"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="namespace_file.html" title="Namespace hdf5::file"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">h5cpp 0.3.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">API reference</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="namespace_file.html"
+                        title="previous chapter">Namespace <code class="docutils literal"><span class="pre">hdf5::file</span></code></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="namespace_node.html"
+                        title="next chapter">Namespace <code class="docutils literal"><span class="pre">hdf5::node</span></code></a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api_reference/namespace_filter.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="namespace-hdf5-filter">
+<h1>Namespace <code class="xref cpp cpp-any docutils literal"><span class="pre">hdf5::filter</span></code><a class="headerlink" href="#namespace-hdf5-filter" title="Permalink to this headline">¶</a></h1>
+<dl class="type">
+<dt id="_CPPv2N4hdf56filter12AvailabilityE">
+<span id="hdf5::filter::Availability"></span><span class="target" id="h5cppnamespacehdf5_1_1filter_1a23e7a93694ab3e81531c8d4f7cb7c789"></span><em class="property">enum </em><em class="property">type </em><code class="descclassname">hdf5::filter::</code><code class="descname">Availability</code><a class="headerlink" href="#_CPPv2N4hdf56filter12AvailabilityE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>availability requirement of a filter </p>
+<p>When a filter is applied to a dataset creation property list the user in general must declare a degree of availability for the filter. A filter can be either  optional or  mandatory. In the former case the filter is simply omitted if not available (for instance an external filter) in the latter case the operation fails if the filter is not available.</p>
+<p>This enumeration type is used to mark a filter as optional or mandatory. </p>
+<p><em>Values:</em></p>
+<dl class="member">
+<dt id="_CPPv2N4hdf56filter9MANDATORYE">
+<span id="hdf5::filter::MANDATORY"></span><span class="target" id="h5cppnamespacehdf5_1_1filter_1a23e7a93694ab3e81531c8d4f7cb7c789ac25db15b6f91b287b5b3c8a515bd21ce"></span> = H5Z_FLAG_MANDATORY</dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N4hdf56filter8OPTIONALE">
+<span id="hdf5::filter::OPTIONAL"></span><span class="target" id="h5cppnamespacehdf5_1_1filter_1a23e7a93694ab3e81531c8d4f7cb7c789a7951811e4b085cf68ed3dc3191f36405"></span> = H5Z_FLAG_OPTIONAL</dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="_CPPv2N4hdf56filter6FilterE">
+<span id="hdf5::filter::Filter"></span><span class="target" id="h5cppclasshdf5_1_1filter_1_1Filter"></span><em class="property">class </em></dt>
+<dd><p>abstract filter class </p>
+<p>Base class for all filters. These classes are primarily intended to allow easy configuration of filters. They basically only store the fitlers parameters and apply them to the dataset creation property list. </p>
+<p>Subclassed by <a class="reference internal" href="#h5cppclasshdf5_1_1filter_1_1Deflate"><span class="std std-ref">hdf5::filter::Deflate</span></a>, <a class="reference internal" href="#h5cppclasshdf5_1_1filter_1_1Fletcher32"><span class="std std-ref">hdf5::filter::Fletcher32</span></a>, <a class="reference internal" href="#h5cppclasshdf5_1_1filter_1_1Shuffle"><span class="std std-ref">hdf5::filter::Shuffle</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N4hdf56filter6Filter6FilterEv">
+<span id="hdf5::filter::Filter::Filter"></span><span class="target" id="h5cppclasshdf5_1_1filter_1_1Filter_1a1fd69b539137a5dda261992c80877678"></span><code class="descclassname">hdf5::filter::Filter::</code><code class="descname">Filter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4hdf56filter6Filter6FilterEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>default constructor </p>
+<p>Required for compliance with STL containers. Can use the default implementation. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK4hdf56filter6FilterclERKN8property19DatasetCreationListE12Availability">
+<span id="hdf5::filter::Filter::call-operator__property::DatasetCreationListCR.AvailabilityC"></span><span class="target" id="h5cppclasshdf5_1_1filter_1_1Filter_1a2fb0991d08df04ac1bb0a60325368567"></span><em class="property">virtual</em> void <code class="descclassname">hdf5::filter::Filter::</code><code class="descname">operator()</code><span class="sig-paren">(</span><em class="property">const</em> property::<a class="reference internal" href="namespace_property.html#_CPPv2N4hdf58property19DatasetCreationListE" title="hdf5::property::DatasetCreationList">DatasetCreationList</a> &amp;<em>dcpl</em>, <a class="reference internal" href="#_CPPv2N4hdf56filter12AvailabilityE" title="hdf5::filter::Availability">Availability</a> <em>flag</em> = Availability::MANDATORY<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK4hdf56filter6FilterclERKN8property19DatasetCreationListE12Availability" title="Permalink to this definition">¶</a><br /> = 0</dt>
+<dd><p>apply filter </p>
+<p>Applies a filter to a particular dataset creation property list.</p>
+<p><dl class="docutils">
+<dt><strong>Exceptions</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">std::runtime_error</span></code>: in case of a failure </li>
+</ul>
+</dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">dcpl</span></code>: reference to the dataset creation property list </li>
+<li><code class="docutils literal"><span class="pre">flag</span></code>: determines the availability requirement for a filter which is  mandatory by default. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK4hdf56filter6Filter2idEv">
+<span id="hdf5::filter::Filter::idC"></span><span class="target" id="h5cppclasshdf5_1_1filter_1_1Filter_1a0922f296e404a30e8f9e5ba9c35ab716"></span>FilterID <code class="descclassname">hdf5::filter::Filter::</code><code class="descname">id</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK4hdf56filter6Filter2idEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>get the ID of the filter </p>
+<p>Return the actual ID of a filter. As we do not store any particular HDF5 state in this class this function does not throw and is a constexpr. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="_CPPv2N4hdf56filter7DeflateE">
+<span id="hdf5::filter::Deflate"></span><span class="target" id="h5cppclasshdf5_1_1filter_1_1Deflate"></span><em class="property">class </em></dt>
+<dd><p>Inherits from <a class="reference internal" href="#h5cppclasshdf5_1_1filter_1_1Filter"><span class="std std-ref">hdf5::filter::Filter</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2NK4hdf56filter7DeflateclERKN8property19DatasetCreationListE12Availability">
+<span id="hdf5::filter::Deflate::call-operator__property::DatasetCreationListCR.AvailabilityC"></span><span class="target" id="h5cppclasshdf5_1_1filter_1_1Deflate_1aaa912ac29a882ed8da35980997ec3656"></span><em class="property">virtual</em> void <code class="descclassname">hdf5::filter::Deflate::</code><code class="descname">operator()</code><span class="sig-paren">(</span><em class="property">const</em> property::<a class="reference internal" href="namespace_property.html#_CPPv2N4hdf58property19DatasetCreationListE" title="hdf5::property::DatasetCreationList">DatasetCreationList</a> &amp;<em>dcpl</em>, <a class="reference internal" href="#_CPPv2N4hdf56filter12AvailabilityE" title="hdf5::filter::Availability">Availability</a> <em>flag</em> = Availability::MANDATORY<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK4hdf56filter7DeflateclERKN8property19DatasetCreationListE12Availability" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>apply filter </p>
+<p>Applies a filter to a particular dataset creation property list.</p>
+<p><dl class="docutils">
+<dt><strong>Exceptions</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">std::runtime_error</span></code>: in case of a failure </li>
+</ul>
+</dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">dcpl</span></code>: reference to the dataset creation property list </li>
+<li><code class="docutils literal"><span class="pre">flag</span></code>: determines the availability requirement for a filter which is  mandatory by default. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="_CPPv2N4hdf56filter7ShuffleE">
+<span id="hdf5::filter::Shuffle"></span><span class="target" id="h5cppclasshdf5_1_1filter_1_1Shuffle"></span><em class="property">class </em></dt>
+<dd><p>Inherits from <a class="reference internal" href="#h5cppclasshdf5_1_1filter_1_1Filter"><span class="std std-ref">hdf5::filter::Filter</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2NK4hdf56filter7ShuffleclERKN8property19DatasetCreationListE12Availability">
+<span id="hdf5::filter::Shuffle::call-operator__property::DatasetCreationListCR.AvailabilityC"></span><span class="target" id="h5cppclasshdf5_1_1filter_1_1Shuffle_1aa0a16c097018d06d10d232a529d25300"></span><em class="property">virtual</em> void <code class="descclassname">hdf5::filter::Shuffle::</code><code class="descname">operator()</code><span class="sig-paren">(</span><em class="property">const</em> property::<a class="reference internal" href="namespace_property.html#_CPPv2N4hdf58property19DatasetCreationListE" title="hdf5::property::DatasetCreationList">DatasetCreationList</a> &amp;<em>dcpl</em>, <a class="reference internal" href="#_CPPv2N4hdf56filter12AvailabilityE" title="hdf5::filter::Availability">Availability</a> <em>flag</em> = Availability::MANDATORY<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK4hdf56filter7ShuffleclERKN8property19DatasetCreationListE12Availability" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>apply filter </p>
+<p>Applies a filter to a particular dataset creation property list.</p>
+<p><dl class="docutils">
+<dt><strong>Exceptions</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">std::runtime_error</span></code>: in case of a failure </li>
+</ul>
+</dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">dcpl</span></code>: reference to the dataset creation property list </li>
+<li><code class="docutils literal"><span class="pre">flag</span></code>: determines the availability requirement for a filter which is  mandatory by default. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="_CPPv2N4hdf56filter10Fletcher32E">
+<span id="hdf5::filter::Fletcher32"></span><span class="target" id="h5cppclasshdf5_1_1filter_1_1Fletcher32"></span><em class="property">class </em></dt>
+<dd><p><a class="reference internal" href="#h5cppclasshdf5_1_1filter_1_1Fletcher32"><span class="std std-ref">Fletcher32</span></a> checksum filter. </p>
+<p>If applied to a dataset creation property list this filter will setup the fletcher32 checksum filter. </p>
+<p>Inherits from <a class="reference internal" href="#h5cppclasshdf5_1_1filter_1_1Filter"><span class="std std-ref">hdf5::filter::Filter</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N4hdf56filter10Fletcher3210Fletcher32Ev">
+<span id="hdf5::filter::Fletcher32::Fletcher32"></span><span class="target" id="h5cppclasshdf5_1_1filter_1_1Fletcher32_1a60a280bc283f62228fba5d4a69e57bb1"></span><code class="descclassname">hdf5::filter::Fletcher32::</code><code class="descname">Fletcher32</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4hdf56filter10Fletcher3210Fletcher32Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>default constructor </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK4hdf56filter10Fletcher32clERKN8property19DatasetCreationListE12Availability">
+<span id="hdf5::filter::Fletcher32::call-operator__property::DatasetCreationListCR.AvailabilityC"></span><span class="target" id="h5cppclasshdf5_1_1filter_1_1Fletcher32_1a5c1c39f55e2f8c486a533a1bb81dcdc0"></span><em class="property">virtual</em> void <code class="descclassname">hdf5::filter::Fletcher32::</code><code class="descname">operator()</code><span class="sig-paren">(</span><em class="property">const</em> property::<a class="reference internal" href="namespace_property.html#_CPPv2N4hdf58property19DatasetCreationListE" title="hdf5::property::DatasetCreationList">DatasetCreationList</a> &amp;<em>dcpl</em>, <a class="reference internal" href="#_CPPv2N4hdf56filter12AvailabilityE" title="hdf5::filter::Availability">Availability</a> <em>flag</em> = Availability::MANDATORY<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK4hdf56filter10Fletcher32clERKN8property19DatasetCreationListE12Availability" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>apply filter </p>
+<p>Applies the filter to a dataset creation property list.</p>
+<p><dl class="docutils">
+<dt><strong>Exceptions</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">std::runtime_error</span></code>: in case of a failure </li>
+</ul>
+</dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">dcpl</span></code>: reference to the dataset creation property list </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="namespace_node.html" title="Namespace hdf5::node"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="namespace_file.html" title="Namespace hdf5::file"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">h5cpp 0.3.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >API reference</a> &#187;</li> 
+      </ul>
+    </div>
+<li>generated on 2019-04-04 02:04:20 from master (32e7b6d)</li>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Deutsches Elektronen-Synchrotron, European Spallation Source ERIC; generated on 2019-04-04 02:04:20 from master (32e7b6d).
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
+    </div>
+
+  </body>
+</html>

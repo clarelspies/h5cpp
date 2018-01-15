@@ -1,0 +1,1267 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Namespace hdf5::datatype &#8212; h5cpp 0.3.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.3.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Namespace hdf5::file" href="namespace_file.html" />
+    <link rel="prev" title="Namespace hdf5::dataspace" href="namespace_dataspace.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="namespace_file.html" title="Namespace hdf5::file"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="namespace_dataspace.html" title="Namespace hdf5::dataspace"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">h5cpp 0.3.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">API reference</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Namespace <code class="docutils literal"><span class="pre">hdf5::datatype</span></code></a><ul>
+<li><a class="reference internal" href="#enumerations">Enumerations</a><ul>
+<li><a class="reference internal" href="#class"><code class="docutils literal"><span class="pre">Class</span></code></a></li>
+<li><a class="reference internal" href="#order"><code class="docutils literal"><span class="pre">Order</span></code></a></li>
+<li><a class="reference internal" href="#sign"><code class="docutils literal"><span class="pre">Sign</span></code></a></li>
+<li><a class="reference internal" href="#norm"><code class="docutils literal"><span class="pre">Norm</span></code></a></li>
+<li><a class="reference internal" href="#pad"><code class="docutils literal"><span class="pre">Pad</span></code></a></li>
+<li><a class="reference internal" href="#stringpad"><code class="docutils literal"><span class="pre">StringPad</span></code></a></li>
+<li><a class="reference internal" href="#direction"><code class="docutils literal"><span class="pre">Direction</span></code></a></li>
+<li><a class="reference internal" href="#characterencoding"><code class="docutils literal"><span class="pre">CharacterEncoding</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#classes">Classes</a><ul>
+<li><a class="reference internal" href="#datatype"><code class="docutils literal"><span class="pre">Datatype</span></code></a></li>
+<li><a class="reference internal" href="#array"><code class="docutils literal"><span class="pre">Array</span></code></a></li>
+<li><a class="reference internal" href="#vlengtharray"><code class="docutils literal"><span class="pre">VLengthArray</span></code></a></li>
+<li><a class="reference internal" href="#compound"><code class="docutils literal"><span class="pre">Compound</span></code></a></li>
+<li><a class="reference internal" href="#float"><code class="docutils literal"><span class="pre">Float</span></code></a></li>
+<li><a class="reference internal" href="#integer"><code class="docutils literal"><span class="pre">Integer</span></code></a></li>
+<li><a class="reference internal" href="#string"><code class="docutils literal"><span class="pre">String</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#type-traits">Type traits</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="namespace_dataspace.html"
+                        title="previous chapter">Namespace <code class="docutils literal"><span class="pre">hdf5::dataspace</span></code></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="namespace_file.html"
+                        title="next chapter">Namespace <code class="docutils literal"><span class="pre">hdf5::file</span></code></a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api_reference/namespace_datatype.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="namespace-hdf5-datatype">
+<h1>Namespace <code class="xref cpp cpp-any docutils literal"><span class="pre">hdf5::datatype</span></code><a class="headerlink" href="#namespace-hdf5-datatype" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="enumerations">
+<h2>Enumerations<a class="headerlink" href="#enumerations" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="class">
+<h3><code class="xref cpp cpp-enum docutils literal"><span class="pre">Class</span></code><a class="headerlink" href="#class" title="Permalink to this headline">¶</a></h3>
+<dl class="type">
+<dt id="_CPPv2N4hdf58datatype5ClassE">
+<span id="hdf5::datatype::Class"></span><span class="target" id="h5cppnamespacehdf5_1_1datatype_1a4c74b0548acbc22905a58f45e733fda7"></span><em class="property">enum </em><em class="property">type </em><code class="descclassname">hdf5::datatype::</code><code class="descname">Class</code><a class="headerlink" href="#_CPPv2N4hdf58datatype5ClassE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="member">
+<dt id="_CPPv2N4hdf58datatype4NONEE">
+<span id="hdf5::datatype::NONE"></span><span class="target" id="h5cppnamespacehdf5_1_1datatype_1a4c74b0548acbc22905a58f45e733fda7ab50339a10e1de285ac99d4c3990b8693"></span> = H5T_NO_CLASS</dt>
+<dd><p>indicates a non-type </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N4hdf58datatype7INTEGERE">
+<span id="hdf5::datatype::INTEGER"></span><span class="target" id="h5cppnamespacehdf5_1_1datatype_1a4c74b0548acbc22905a58f45e733fda7a5d5cd46919fa987731fb2edefe0f2a0c"></span> = H5T_INTEGER</dt>
+<dd><p>indicates an integer type </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N4hdf58datatype5FLOATE">
+<span id="hdf5::datatype::FLOAT"></span><span class="target" id="h5cppnamespacehdf5_1_1datatype_1a4c74b0548acbc22905a58f45e733fda7ae738c26bf4ce1037fa81b039a915cbf6"></span> = H5T_FLOAT</dt>
+<dd><p>indicates a float type </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N4hdf58datatype4TIMEE">
+<span id="hdf5::datatype::TIME"></span><span class="target" id="h5cppnamespacehdf5_1_1datatype_1a4c74b0548acbc22905a58f45e733fda7a346ff32eaa3c09983fb2ec057816d352"></span> = H5T_TIME</dt>
+<dd><p>indicates a time type </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N4hdf58datatype6STRINGE">
+<span id="hdf5::datatype::STRING"></span><span class="target" id="h5cppnamespacehdf5_1_1datatype_1a4c74b0548acbc22905a58f45e733fda7a63b588d5559f64f89a416e656880b949"></span> = H5T_STRING</dt>
+<dd><p>indicates a string type </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N4hdf58datatype8BITFIELDE">
+<span id="hdf5::datatype::BITFIELD"></span><span class="target" id="h5cppnamespacehdf5_1_1datatype_1a4c74b0548acbc22905a58f45e733fda7a6588e419bd9594f4ad3dc3869f61e71b"></span> = H5T_BITFIELD</dt>
+<dd><p>indicates a bitfield type </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N4hdf58datatype6OPAQUEE">
+<span id="hdf5::datatype::OPAQUE"></span><span class="target" id="h5cppnamespacehdf5_1_1datatype_1a4c74b0548acbc22905a58f45e733fda7af05b252996befbe2cb461cc80c9ccbed"></span> = H5T_OPAQUE</dt>
+<dd><p>indicates an opaque type </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N4hdf58datatype8COMPOUNDE">
+<span id="hdf5::datatype::COMPOUND"></span><span class="target" id="h5cppnamespacehdf5_1_1datatype_1a4c74b0548acbc22905a58f45e733fda7a756a113833040dfb33e27830fba5e901"></span> = H5T_COMPOUND</dt>
+<dd><p>indicates a compound type </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N4hdf58datatype9REFERENCEE">
+<span id="hdf5::datatype::REFERENCE"></span><span class="target" id="h5cppnamespacehdf5_1_1datatype_1a4c74b0548acbc22905a58f45e733fda7adcd320d017d7f3c317bc8b234287bc9f"></span> = H5T_REFERENCE</dt>
+<dd><p>indicates a reference type </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N4hdf58datatype4ENUME">
+<span id="hdf5::datatype::ENUM"></span><span class="target" id="h5cppnamespacehdf5_1_1datatype_1a4c74b0548acbc22905a58f45e733fda7a85a1979d26d0ef93dcc13a72fee80705"></span> = H5T_ENUM</dt>
+<dd><p>indicates an enumeration type </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N4hdf58datatype9VARLENGTHE">
+<span id="hdf5::datatype::VARLENGTH"></span><span class="target" id="h5cppnamespacehdf5_1_1datatype_1a4c74b0548acbc22905a58f45e733fda7add36fc20391ca91e336519c775f12281"></span> = H5T_VLEN</dt>
+<dd><p>indicates a variable length type </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N4hdf58datatype5ARRAYE">
+<span id="hdf5::datatype::ARRAY"></span><span class="target" id="h5cppnamespacehdf5_1_1datatype_1a4c74b0548acbc22905a58f45e733fda7acb4fb1757fb37c43cded35d3eb857c43"></span> = H5T_ARRAY</dt>
+<dd><p>indicates an array type </p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>doxygenfunction: Unable to resolve multiple matches for function &#8220;hdf5::datatype::operator&lt;&lt;&#8221; with arguments (std::ostream &amp;, const Class &amp;) in doxygen xml output for project &#8220;h5cpp&#8221; from directory: /home/jenkins/workspace/ess-dmsc_h5cpp_master/h5cpp/build/doc/source/../doxygen_xml.
+Potential matches:
+</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">CharacterEncoding</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">Direction</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">Norm</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">Order</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">Pad</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">Sign</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">StringPad</span>  <span class="o">&amp;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="order">
+<h3><code class="xref cpp cpp-enum docutils literal"><span class="pre">Order</span></code><a class="headerlink" href="#order" title="Permalink to this headline">¶</a></h3>
+<dl class="type">
+<dt id="_CPPv2N4hdf58datatype5OrderE">
+<span id="hdf5::datatype::Order"></span><span class="target" id="h5cppnamespacehdf5_1_1datatype_1a1d93ad34720d0c558c30a5f25ceba54a"></span><em class="property">enum </em><em class="property">type </em><code class="descclassname">hdf5::datatype::</code><code class="descname">Order</code><a class="headerlink" href="#_CPPv2N4hdf58datatype5OrderE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>enumeration type for byte order </p>
+<p><em>Values:</em></p>
+<dl class="member">
+<dt id="_CPPv2N4hdf58datatype2LEE">
+<span id="hdf5::datatype::LE"></span><span class="target" id="h5cppnamespacehdf5_1_1datatype_1a1d93ad34720d0c558c30a5f25ceba54aacfe6055d2e0503be378bb63449ec7ba6"></span> = H5T_ORDER_LE</dt>
+<dd><p>littlen endian type </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N4hdf58datatype2BEE">
+<span id="hdf5::datatype::BE"></span><span class="target" id="h5cppnamespacehdf5_1_1datatype_1a1d93ad34720d0c558c30a5f25ceba54aad3dcf429c679f9af82eb9a3b31c4df44"></span> = H5T_ORDER_BE</dt>
+<dd><p>big endian type </p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>doxygenfunction: Unable to resolve multiple matches for function &#8220;hdf5::datatype::operator&lt;&lt;&#8221; with arguments (std::ostream &amp;, const Order &amp;) in doxygen xml output for project &#8220;h5cpp&#8221; from directory: /home/jenkins/workspace/ess-dmsc_h5cpp_master/h5cpp/build/doc/source/../doxygen_xml.
+Potential matches:
+</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">CharacterEncoding</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">Direction</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">Norm</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">Order</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">Pad</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">Sign</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">StringPad</span>  <span class="o">&amp;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="sign">
+<h3><code class="xref cpp cpp-enum docutils literal"><span class="pre">Sign</span></code><a class="headerlink" href="#sign" title="Permalink to this headline">¶</a></h3>
+<dl class="type">
+<dt id="_CPPv2N4hdf58datatype4SignE">
+<span id="hdf5::datatype::Sign"></span><span class="target" id="h5cppnamespacehdf5_1_1datatype_1a327c023333168c4edd831891badbc143"></span><em class="property">enum </em><em class="property">type </em><code class="descclassname">hdf5::datatype::</code><code class="descname">Sign</code><a class="headerlink" href="#_CPPv2N4hdf58datatype4SignE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>enumeration for sign </p>
+<p><em>Values:</em></p>
+<dl class="member">
+<dt id="_CPPv2N4hdf58datatype15TWOS_COMPLEMENTE">
+<span id="hdf5::datatype::TWOS_COMPLEMENT"></span><span class="target" id="h5cppnamespacehdf5_1_1datatype_1a327c023333168c4edd831891badbc143acd5f75d2b8476f41bf67aed69472d034"></span> = H5T_SGN_2</dt>
+<dd><p>indicates a signed type </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N4hdf58datatype8UNSIGNEDE">
+<span id="hdf5::datatype::UNSIGNED"></span><span class="target" id="h5cppnamespacehdf5_1_1datatype_1a327c023333168c4edd831891badbc143aaf36b47f395cd01f48b8fc1013665054"></span> = H5T_SGN_NONE</dt>
+<dd><p>indicates an unsigned type </p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>doxygenfunction: Unable to resolve multiple matches for function &#8220;hdf5::datatype::operator&lt;&lt;&#8221; with arguments (std::ostream &amp;, const Sign &amp;) in doxygen xml output for project &#8220;h5cpp&#8221; from directory: /home/jenkins/workspace/ess-dmsc_h5cpp_master/h5cpp/build/doc/source/../doxygen_xml.
+Potential matches:
+</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">CharacterEncoding</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">Direction</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">Norm</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">Order</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">Pad</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">Sign</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">StringPad</span>  <span class="o">&amp;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="norm">
+<h3><code class="xref cpp cpp-enum docutils literal"><span class="pre">Norm</span></code><a class="headerlink" href="#norm" title="Permalink to this headline">¶</a></h3>
+<dl class="type">
+<dt id="_CPPv2N4hdf58datatype4NormE">
+<span id="hdf5::datatype::Norm"></span><span class="target" id="h5cppnamespacehdf5_1_1datatype_1a0e65d9777bb3ce3f6c58fa51669db736"></span><em class="property">enum </em><em class="property">type </em><code class="descclassname">hdf5::datatype::</code><code class="descname">Norm</code><a class="headerlink" href="#_CPPv2N4hdf58datatype4NormE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>enumeration describes mantissa norm </p>
+<p><em>Values:</em></p>
+<dl class="member">
+<dt id="_CPPv2N4hdf58datatype7IMPLIEDE">
+<span id="hdf5::datatype::IMPLIED"></span><span class="target" id="h5cppnamespacehdf5_1_1datatype_1a0e65d9777bb3ce3f6c58fa51669db736a535fc307c5aea0155a4fa87541b612c7"></span> = H5T_NORM_IMPLIED</dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N4hdf58datatype6MSBSETE">
+<span id="hdf5::datatype::MSBSET"></span><span class="target" id="h5cppnamespacehdf5_1_1datatype_1a0e65d9777bb3ce3f6c58fa51669db736ad6731ac8bc61f366b6d3af7fe5659e93"></span> = H5T_NORM_MSBSET</dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N4hdf58datatype4NONEE">
+<span class="target" id="h5cppnamespacehdf5_1_1datatype_1a0e65d9777bb3ce3f6c58fa51669db736ab50339a10e1de285ac99d4c3990b8693"></span> = H5T_NORM_NONE</dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>doxygenfunction: Unable to resolve multiple matches for function &#8220;hdf5::datatype::operator&lt;&lt;&#8221; with arguments (std::ostream &amp;, const Norm &amp;) in doxygen xml output for project &#8220;h5cpp&#8221; from directory: /home/jenkins/workspace/ess-dmsc_h5cpp_master/h5cpp/build/doc/source/../doxygen_xml.
+Potential matches:
+</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">CharacterEncoding</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">Direction</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">Norm</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">Order</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">Pad</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">Sign</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">StringPad</span>  <span class="o">&amp;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="pad">
+<h3><code class="xref cpp cpp-enum docutils literal"><span class="pre">Pad</span></code><a class="headerlink" href="#pad" title="Permalink to this headline">¶</a></h3>
+<dl class="type">
+<dt id="_CPPv2N4hdf58datatype3PadE">
+<span id="hdf5::datatype::Pad"></span><span class="target" id="h5cppnamespacehdf5_1_1datatype_1ad9ca0d77daf2f8245756d50962990e98"></span><em class="property">enum </em><em class="property">type </em><code class="descclassname">hdf5::datatype::</code><code class="descname">Pad</code><a class="headerlink" href="#_CPPv2N4hdf58datatype3PadE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>enumeration for floating point padding </p>
+<p><em>Values:</em></p>
+<dl class="member">
+<dt id="_CPPv2N4hdf58datatype4ZEROE">
+<span id="hdf5::datatype::ZERO"></span><span class="target" id="h5cppnamespacehdf5_1_1datatype_1ad9ca0d77daf2f8245756d50962990e98a529e9e0beb5f85d1f132917c1a09860c"></span> = H5T_PAD_ZERO</dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N4hdf58datatype3ONEE">
+<span id="hdf5::datatype::ONE"></span><span class="target" id="h5cppnamespacehdf5_1_1datatype_1ad9ca0d77daf2f8245756d50962990e98abc21e6484530fc9d0313cb816b733396"></span> = H5T_PAD_ONE</dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N4hdf58datatype10BACKGROUNDE">
+<span id="hdf5::datatype::BACKGROUND"></span><span class="target" id="h5cppnamespacehdf5_1_1datatype_1ad9ca0d77daf2f8245756d50962990e98a87ed58ce5596142e11cb65deb049bb4b"></span> = H5T_PAD_BACKGROUND</dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>doxygenfunction: Unable to resolve multiple matches for function &#8220;hdf5::datatype::operator&lt;&lt;&#8221; with arguments (std::ostream &amp;, const Pad &amp;) in doxygen xml output for project &#8220;h5cpp&#8221; from directory: /home/jenkins/workspace/ess-dmsc_h5cpp_master/h5cpp/build/doc/source/../doxygen_xml.
+Potential matches:
+</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">CharacterEncoding</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">Direction</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">Norm</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">Order</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">Pad</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">Sign</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">StringPad</span>  <span class="o">&amp;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="stringpad">
+<h3><code class="xref cpp cpp-enum docutils literal"><span class="pre">StringPad</span></code><a class="headerlink" href="#stringpad" title="Permalink to this headline">¶</a></h3>
+<dl class="type">
+<dt id="_CPPv2N4hdf58datatype9StringPadE">
+<span id="hdf5::datatype::StringPad"></span><span class="target" id="h5cppnamespacehdf5_1_1datatype_1a59502b2f1a177524573f04e257a1aa7c"></span><em class="property">enum </em><em class="property">type </em><code class="descclassname">hdf5::datatype::</code><code class="descname">StringPad</code><a class="headerlink" href="#_CPPv2N4hdf58datatype9StringPadE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>enumeration determining string padding </p>
+<p><em>Values:</em></p>
+<dl class="member">
+<dt id="_CPPv2N4hdf58datatype8NULLTERME">
+<span id="hdf5::datatype::NULLTERM"></span><span class="target" id="h5cppnamespacehdf5_1_1datatype_1a59502b2f1a177524573f04e257a1aa7cab1746e4a21e8d546b2591ff333618f70"></span> = H5T_STR_NULLTERM</dt>
+<dd><p>indicates a null terminated string type </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N4hdf58datatype7NULLPADE">
+<span id="hdf5::datatype::NULLPAD"></span><span class="target" id="h5cppnamespacehdf5_1_1datatype_1a59502b2f1a177524573f04e257a1aa7ca93c19bf759576c8a76adb30e4dc7e63d"></span> = H5T_STR_NULLPAD</dt>
+<dd><p>indicates a null padded string type </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N4hdf58datatype8SPACEPADE">
+<span id="hdf5::datatype::SPACEPAD"></span><span class="target" id="h5cppnamespacehdf5_1_1datatype_1a59502b2f1a177524573f04e257a1aa7caa5856f44496804df93e36b451e25c8b8"></span> = H5T_STR_SPACEPAD</dt>
+<dd><p>indicates a space padded string type </p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>doxygenfunction: Unable to resolve multiple matches for function &#8220;hdf5::datatype::operator&lt;&lt;&#8221; with arguments (std::ostream &amp;, const StringPad &amp;) in doxygen xml output for project &#8220;h5cpp&#8221; from directory: /home/jenkins/workspace/ess-dmsc_h5cpp_master/h5cpp/build/doc/source/../doxygen_xml.
+Potential matches:
+</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">CharacterEncoding</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">Direction</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">Norm</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">Order</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">Pad</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">Sign</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">StringPad</span>  <span class="o">&amp;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="direction">
+<h3><code class="xref cpp cpp-enum docutils literal"><span class="pre">Direction</span></code><a class="headerlink" href="#direction" title="Permalink to this headline">¶</a></h3>
+<dl class="type">
+<dt id="_CPPv2N4hdf58datatype9DirectionE">
+<span id="hdf5::datatype::Direction"></span><span class="target" id="h5cppnamespacehdf5_1_1datatype_1af70aa9f99fc5c6721059915026fcad0b"></span><em class="property">enum </em><em class="property">type </em><code class="descclassname">hdf5::datatype::</code><code class="descname">Direction</code><a class="headerlink" href="#_CPPv2N4hdf58datatype9DirectionE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="member">
+<dt id="_CPPv2N4hdf58datatype6ASCENDE">
+<span id="hdf5::datatype::ASCEND"></span><span class="target" id="h5cppnamespacehdf5_1_1datatype_1af70aa9f99fc5c6721059915026fcad0ba36e06029163afdfcc0b1ff30ecee7e8c"></span> = H5T_DIR_ASCEND</dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N4hdf58datatype7DESCENDE">
+<span id="hdf5::datatype::DESCEND"></span><span class="target" id="h5cppnamespacehdf5_1_1datatype_1af70aa9f99fc5c6721059915026fcad0ba5242f744ba60edc391e2d2d69a5a27ab"></span> = H5T_DIR_DESCEND</dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>doxygenfunction: Unable to resolve multiple matches for function &#8220;hdf5::datatype::operator&lt;&lt;&#8221; with arguments (std::ostream &amp;, const Direction &amp;) in doxygen xml output for project &#8220;h5cpp&#8221; from directory: /home/jenkins/workspace/ess-dmsc_h5cpp_master/h5cpp/build/doc/source/../doxygen_xml.
+Potential matches:
+</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">CharacterEncoding</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">Direction</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">Norm</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">Order</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">Pad</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">Sign</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">StringPad</span>  <span class="o">&amp;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="characterencoding">
+<h3><code class="xref cpp cpp-enum docutils literal"><span class="pre">CharacterEncoding</span></code><a class="headerlink" href="#characterencoding" title="Permalink to this headline">¶</a></h3>
+<dl class="type">
+<dt id="_CPPv2N4hdf58datatype17CharacterEncodingE">
+<span id="hdf5::datatype::CharacterEncoding"></span><span class="target" id="h5cppnamespacehdf5_1_1datatype_1a34fe1939ec8dfe173711bb03e995192f"></span><em class="property">enum </em><em class="property">type </em><code class="descclassname">hdf5::datatype::</code><code class="descname">CharacterEncoding</code><a class="headerlink" href="#_CPPv2N4hdf58datatype17CharacterEncodingE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>character set encoding </p>
+<p>Enumeration type determining the character encoding used by string types and links. </p>
+<p><em>Values:</em></p>
+<dl class="member">
+<dt id="_CPPv2N4hdf58datatype5ASCIIE">
+<span id="hdf5::datatype::ASCII"></span><span class="target" id="h5cppnamespacehdf5_1_1datatype_1a34fe1939ec8dfe173711bb03e995192fad2cd8253361a9c732d21ca1d336599cc"></span> = H5T_CSET_ASCII</dt>
+<dd><p>ASCII. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N4hdf58datatype4UTF8E">
+<span id="hdf5::datatype::UTF8"></span><span class="target" id="h5cppnamespacehdf5_1_1datatype_1a34fe1939ec8dfe173711bb03e995192faeb7ee0fb585e2ac64fdc086466c474b1"></span> = H5T_CSET_UTF8</dt>
+<dd><p>UTF8. </p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>doxygenfunction: Unable to resolve multiple matches for function &#8220;hdf5::datatype::operator&lt;&lt;&#8221; with arguments (std::ostream &amp;, const CharacterEncoding &amp;) in doxygen xml output for project &#8220;h5cpp&#8221; from directory: /home/jenkins/workspace/ess-dmsc_h5cpp_master/h5cpp/build/doc/source/../doxygen_xml.
+Potential matches:
+</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">CharacterEncoding</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">Direction</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">Norm</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">Order</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">Pad</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">Sign</span>  <span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">DLL_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span>  <span class="n">StringPad</span>  <span class="o">&amp;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="datatype">
+<h3><code class="xref cpp cpp-class docutils literal"><span class="pre">Datatype</span></code><a class="headerlink" href="#datatype" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="_CPPv2N4hdf58datatype8DatatypeE">
+<span id="hdf5::datatype::Datatype"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1Datatype"></span><em class="property">class </em></dt>
+<dd><p>base class for all data types </p>
+<p>Subclassed by <a class="reference internal" href="#h5cppclasshdf5_1_1datatype_1_1Array"><span class="std std-ref">hdf5::datatype::Array</span></a>, <a class="reference internal" href="#h5cppclasshdf5_1_1datatype_1_1Compound"><span class="std std-ref">hdf5::datatype::Compound</span></a>, hdf5::datatype::Enum, <a class="reference internal" href="#h5cppclasshdf5_1_1datatype_1_1Float"><span class="std std-ref">hdf5::datatype::Float</span></a>, <a class="reference internal" href="#h5cppclasshdf5_1_1datatype_1_1Integer"><span class="std std-ref">hdf5::datatype::Integer</span></a>, <a class="reference internal" href="#h5cppclasshdf5_1_1datatype_1_1String"><span class="std std-ref">hdf5::datatype::String</span></a>, <a class="reference internal" href="#h5cppclasshdf5_1_1datatype_1_1VLengthArray"><span class="std std-ref">hdf5::datatype::VLengthArray</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N4hdf58datatype8DatatypeD0Ev">
+<span id="hdf5::datatype::Datatype::~Datatype"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1Datatype_1a9c1eb0238d20386f8ec288698e237947"></span><em class="property">virtual</em> <code class="descclassname">hdf5::datatype::Datatype::</code><code class="descname">~Datatype</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4hdf58datatype8DatatypeD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>destructor </p>
+<p>Must be virtual for inheritance. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N4hdf58datatype8Datatype8DatatypeEv">
+<span id="hdf5::datatype::Datatype::Datatype"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1Datatype_1a9a755ff8b72a2e9b71cd625fec975bb9"></span><code class="descclassname">hdf5::datatype::Datatype::</code><code class="descname">Datatype</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4hdf58datatype8Datatype8DatatypeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>default constructor </p>
+<p>Use default compiler implementation here. This will leave datatype as an invalid HDF5 object. For a default constructed datatype the class is NONE.</p>
+<p><dl class="docutils">
+<dt><strong>See</strong></dt>
+<dd><a class="reference internal" href="#h5cppclasshdf5_1_1datatype_1_1Datatype_1af7586202854365e8f70451445a1c7267"><span class="std std-ref">is_valid()</span></a> </dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N4hdf58datatype8Datatype8DatatypeERR12ObjectHandle">
+<span id="hdf5::datatype::Datatype::Datatype__ObjectHandleRR"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1Datatype_1ad3f3a024a2f37c42095c307a9f20b772"></span><code class="descclassname">hdf5::datatype::Datatype::</code><code class="descname">Datatype</code><span class="sig-paren">(</span><a class="reference internal" href="namespace_hdf5.html#_CPPv2N4hdf512ObjectHandleE" title="hdf5::ObjectHandle">ObjectHandle</a> &amp;&amp;<em>handle</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4hdf58datatype8Datatype8DatatypeERR12ObjectHandle" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>constructor </p>
+<p>Construct a datatype from an HDF5 object handle. <dl class="docutils">
+<dt><strong>Exceptions</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">std::runtime_error</span></code>: in case of a failure </li>
+</ul>
+</dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">handle</span></code>: rvalue reference to the original handle </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N4hdf58datatype8Datatype8DatatypeERR8Datatype">
+<span id="hdf5::datatype::Datatype::Datatype__DatatypeRR"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1Datatype_1a352f25034bddfe8116dea8d09e8c6feb"></span><code class="descclassname">hdf5::datatype::Datatype::</code><code class="descname">Datatype</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N4hdf58datatype8Datatype8DatatypeEv" title="hdf5::datatype::Datatype::Datatype">Datatype</a> &amp;&amp;<em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4hdf58datatype8Datatype8DatatypeERR8Datatype" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>move constructor </p>
+<p>Use default implementation here. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N4hdf58datatype8Datatype8DatatypeERK8Datatype">
+<span id="hdf5::datatype::Datatype::Datatype__DatatypeCR"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1Datatype_1a700d2db6046b660e991ea021eac0477b"></span><code class="descclassname">hdf5::datatype::Datatype::</code><code class="descname">Datatype</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv2N4hdf58datatype8Datatype8DatatypeEv" title="hdf5::datatype::Datatype::Datatype">Datatype</a> &amp;<em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4hdf58datatype8Datatype8DatatypeERK8Datatype" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>copy constructor </p>
+<p>Use default compiler implementation. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N4hdf58datatype8DatatypeaSERK8Datatype">
+<span id="hdf5::datatype::Datatype::assign-operator__DatatypeCR"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1Datatype_1aba88d7e0e20f5d6804dd46ee117d59da"></span><a class="reference internal" href="#_CPPv2N4hdf58datatype8DatatypeE" title="hdf5::datatype::Datatype">Datatype</a> &amp;<code class="descclassname">hdf5::datatype::Datatype::</code><code class="descname">operator=</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv2N4hdf58datatype8DatatypeE" title="hdf5::datatype::Datatype">Datatype</a> &amp;<em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4hdf58datatype8DatatypeaSERK8Datatype" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>copy assignment </p>
+<p>Use default compiler implementation here. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N4hdf58datatype8DatatypeaSERR8Datatype">
+<span id="hdf5::datatype::Datatype::assign-operator__DatatypeRR"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1Datatype_1a4fc37b90d9d7eb606603faeccdf69fca"></span><a class="reference internal" href="#_CPPv2N4hdf58datatype8DatatypeE" title="hdf5::datatype::Datatype">Datatype</a> &amp;<code class="descclassname">hdf5::datatype::Datatype::</code><code class="descname">operator=</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N4hdf58datatype8DatatypeE" title="hdf5::datatype::Datatype">Datatype</a> &amp;&amp;<em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4hdf58datatype8DatatypeaSERR8Datatype" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>move assignment </p>
+<p>Use default compiler implementation here. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK4hdf58datatype8Datatype9get_classEv">
+<span id="hdf5::datatype::Datatype::get_classC"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1Datatype_1a44efe7d9ab0b6a740eadf4eacc361454"></span><a class="reference internal" href="#_CPPv2N4hdf58datatype5ClassE" title="hdf5::datatype::Class">Class</a> <code class="descclassname">hdf5::datatype::Datatype::</code><code class="descname">get_class</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK4hdf58datatype8Datatype9get_classEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>returns the datatypes class </p>
+<p><dl class="docutils">
+<dt><strong>Exceptions</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">std::runtime_error</span></code>: in case of a failure </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK4hdf58datatype8Datatype5superEv">
+<span id="hdf5::datatype::Datatype::superC"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1Datatype_1acebfcaa2b4f1b35571e924d75aabf69c"></span><a class="reference internal" href="#_CPPv2N4hdf58datatype8DatatypeE" title="hdf5::datatype::Datatype">Datatype</a> <code class="descclassname">hdf5::datatype::Datatype::</code><code class="descname">super</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK4hdf58datatype8Datatype5superEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>get the base type </p>
+<p>For an array type this will return the base type of the elements of the array. For an enumeration type it will return the underlying integer type.</p>
+<p><dl class="docutils">
+<dt><strong>Exceptions</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">std::runtime_error</span></code>: in case of a failure </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK4hdf58datatype8Datatype11native_typeE9Direction">
+<span id="hdf5::datatype::Datatype::native_type__DirectionC"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1Datatype_1ad46a89136015b01a7b9d4afcaac30a38"></span><a class="reference internal" href="#_CPPv2N4hdf58datatype8DatatypeE" title="hdf5::datatype::Datatype">Datatype</a> <code class="descclassname">hdf5::datatype::Datatype::</code><code class="descname">native_type</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N4hdf58datatype9DirectionE" title="hdf5::datatype::Direction">Direction</a> <em>dir</em> = Direction::ASCEND<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK4hdf58datatype8Datatype11native_typeE9Direction" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>get native type </p>
+<p>Returns the native type associated with a particular data type.</p>
+<p><dl class="docutils">
+<dt><strong>Exceptions</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">std::runtime_error</span></code>: in case of a failure </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK4hdf58datatype8Datatype9has_classE5Class">
+<span id="hdf5::datatype::Datatype::has_class__ClassC"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1Datatype_1ac6b304dcd6e914446fe163fed031e448"></span>bool <code class="descclassname">hdf5::datatype::Datatype::</code><code class="descname">has_class</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N4hdf58datatype5ClassE" title="hdf5::datatype::Class">Class</a> <em>type_class</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK4hdf58datatype8Datatype9has_classE5Class" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>search for a type class </p>
+<p>Checks if a type contains a particular type class. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK4hdf58datatype8Datatype4sizeEv">
+<span id="hdf5::datatype::Datatype::sizeC"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1Datatype_1a6f48b7b648435164f592db0adc9c10ba"></span><em class="property">virtual</em> size_t <code class="descclassname">hdf5::datatype::Datatype::</code><code class="descname">size</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK4hdf58datatype8Datatype4sizeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>get size of type in bytes </p>
+<p><dl class="docutils">
+<dt><strong>Exceptions</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">std::runtime_error</span></code>: in case of a failure </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK4hdf58datatype8Datatype4sizeE6size_t">
+<span id="hdf5::datatype::Datatype::size__sC"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1Datatype_1ae7b3abdea9d2be6e88fe0377db7d4c47"></span><em class="property">virtual</em> void <code class="descclassname">hdf5::datatype::Datatype::</code><code class="descname">size</code><span class="sig-paren">(</span>size_t <em>size</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK4hdf58datatype8Datatype4sizeE6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>set the size of a type in bytes </p>
+<p><dl class="docutils">
+<dt><strong>Exceptions</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">std::runtime_error</span></code>: in case of a failure </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK4hdf58datatype8Datatype8is_validEv">
+<span id="hdf5::datatype::Datatype::is_validC"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1Datatype_1af7586202854365e8f70451445a1c7267"></span>bool <code class="descclassname">hdf5::datatype::Datatype::</code><code class="descname">is_valid</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK4hdf58datatype8Datatype8is_validEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>check status of the object </p>
+<p>Returns true if the instance is a valid HDF5 object, otherwise it returns false. This can be used to check whether or not an instance has been default constructed (in which case flase will be returned). </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Related</p>
+<dl class="function">
+<dt>
+<span class="target" id="h5cppclasshdf5_1_1datatype_1_1Datatype_1a7460f189ea858237ccd151bd46ae9efd"></span><code class="descname">DLL_EXPORT bool operator==(const  Datatype  &amp; lhs, const  Datatype  &amp; rhs)</code></dt>
+<dd><p>equality check for datatypes </p>
+<p>Returns if two datatypes are equal. Datatypes are considered equal if they represent the same type.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>true if instances are considered equal, false otherwise </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">lhs</span></code>: reference to the left handside <a class="reference internal" href="#h5cppclasshdf5_1_1datatype_1_1Datatype"><span class="std std-ref">Datatype</span></a> instance </li>
+<li><code class="docutils literal"><span class="pre">rhs</span></code>: reference to the right handside <a class="reference internal" href="#h5cppclasshdf5_1_1datatype_1_1Datatype"><span class="std std-ref">Datatype</span></a> instance </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="h5cppclasshdf5_1_1datatype_1_1Datatype_1aa2ec141a9dc45c16ddd9e9d06f13a8c5"></span><code class="descname">DLL_EXPORT bool operator!=(const  Datatype  &amp; lhs, const  Datatype  &amp; rhs)</code></dt>
+<dd><p>inequality check for datatypes </p>
+<p>Returns true if both datatypes do not represent the same types.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>true if datatypes are not equal, false otherwise </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">lhs</span></code>: reference to the left hand-side <a class="reference internal" href="#h5cppclasshdf5_1_1datatype_1_1Datatype"><span class="std std-ref">Datatype</span></a> instance </li>
+<li><code class="docutils literal"><span class="pre">rhs</span></code>: reference to the right hand-side <a class="reference internal" href="#h5cppclasshdf5_1_1datatype_1_1Datatype"><span class="std std-ref">Datatype</span></a> instance </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="array">
+<h3><code class="xref cpp cpp-class docutils literal"><span class="pre">Array</span></code><a class="headerlink" href="#array" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="_CPPv2N4hdf58datatype5ArrayE">
+<span id="hdf5::datatype::Array"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1Array"></span><em class="property">class </em></dt>
+<dd><p>array datatype </p>
+<p>This datatype allows storing multidimensional data as a single element in an dataspace layout. Typical applications would be to use this for tensors and vectors. This is a fixed size data type. All instances (elements) of this type stored in an attribute or dataset are of equal size. </p>
+<p>Inherits from <a class="reference internal" href="#h5cppclasshdf5_1_1datatype_1_1Datatype"><span class="std std-ref">hdf5::datatype::Datatype</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N4hdf58datatype5Array5ArrayERR12ObjectHandle">
+<span id="hdf5::datatype::Array::Array__ObjectHandleRR"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1Array_1a567f1baf60a9dcbf9a4ef25ce84e45a4"></span><code class="descclassname">hdf5::datatype::Array::</code><code class="descname">Array</code><span class="sig-paren">(</span><a class="reference internal" href="namespace_hdf5.html#_CPPv2N4hdf512ObjectHandleE" title="hdf5::ObjectHandle">ObjectHandle</a> &amp;&amp;<em>handle</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4hdf58datatype5Array5ArrayERR12ObjectHandle" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>construct from handle </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N4hdf58datatype5Array5ArrayERK8Datatype">
+<span id="hdf5::datatype::Array::Array__DatatypeCR"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1Array_1af8eff50511c231c6c042ee7f1243636f"></span><code class="descclassname">hdf5::datatype::Array::</code><code class="descname">Array</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv2N4hdf58datatype8DatatypeE" title="hdf5::datatype::Datatype">Datatype</a> &amp;<em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4hdf58datatype5Array5ArrayERK8Datatype" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>cosntruct from generic datatype </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK4hdf58datatype5Array10dimensionsEv">
+<span id="hdf5::datatype::Array::dimensionsC"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1Array_1a6a41b790085daa6f3d68e25379f4db77"></span>Dimensions <code class="descclassname">hdf5::datatype::Array::</code><code class="descname">dimensions</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK4hdf58datatype5Array10dimensionsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>get dimensions </p>
+<p>Returns an instance of Dimensions with the number of elements along each dimension.</p>
+<p><dl class="docutils">
+<dt><strong>Exceptions</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">std::runtime_error</span></code>: in case of a failure </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK4hdf58datatype5Array4rankEv">
+<span id="hdf5::datatype::Array::rankC"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1Array_1a6af081d2fd46dacd615a9007cf0476bd"></span>size_t <code class="descclassname">hdf5::datatype::Array::</code><code class="descname">rank</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK4hdf58datatype5Array4rankEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>get rank </p>
+<p>Returns the number of dimensions for an array data type</p>
+<p><dl class="docutils">
+<dt><strong>Exceptions</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">std::runtime_error</span></code>: in case of a failure </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Static Functions</p>
+<dl class="function">
+<dt id="_CPPv2N4hdf58datatype5Array6createERK8DatatypeRK10Dimensions">
+<span id="hdf5::datatype::Array::create__DatatypeCR.DimensionsCR"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1Array_1ac09f65a3aa4cfb10425f10b027a02b74"></span><em class="property">static</em> <a class="reference internal" href="#_CPPv2N4hdf58datatype5ArrayE" title="hdf5::datatype::Array">Array</a> <code class="descclassname">hdf5::datatype::Array::</code><code class="descname">create</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv2N4hdf58datatype8DatatypeE" title="hdf5::datatype::Datatype">Datatype</a> &amp;<em>base_type</em>, <em class="property">const</em> Dimensions &amp;<em>dims</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4hdf58datatype5Array6createERK8DatatypeRK10Dimensions" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>named constructor </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="vlengtharray">
+<h3><code class="xref cpp cpp-class docutils literal"><span class="pre">VLengthArray</span></code><a class="headerlink" href="#vlengtharray" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="_CPPv2N4hdf58datatype12VLengthArrayE">
+<span id="hdf5::datatype::VLengthArray"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1VLengthArray"></span><em class="property">class </em></dt>
+<dd><p>variable length array type </p>
+<p><a class="reference internal" href="#h5cppclasshdf5_1_1datatype_1_1Array"><span class="std std-ref">Array</span></a> datatype allowing each element stored in a dataspace having a different size. This type is restricted to a single dimensions. This limitation makes sense as it does not make to much sense to think about multidimensional objects of different size stored in an attribute or dataset. </p>
+<p>Inherits from <a class="reference internal" href="#h5cppclasshdf5_1_1datatype_1_1Datatype"><span class="std std-ref">hdf5::datatype::Datatype</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N4hdf58datatype12VLengthArray12VLengthArrayEv">
+<span id="hdf5::datatype::VLengthArray::VLengthArray"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1VLengthArray_1a9390581a0b00bbd8b9e06382a6458c92"></span><code class="descclassname">hdf5::datatype::VLengthArray::</code><code class="descname">VLengthArray</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4hdf58datatype12VLengthArray12VLengthArrayEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>default constructor </p>
+<p>This constructor is required for compatibility purposes with STL containers. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N4hdf58datatype12VLengthArray12VLengthArrayERR12ObjectHandle">
+<span id="hdf5::datatype::VLengthArray::VLengthArray__ObjectHandleRR"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1VLengthArray_1a1829fc698f0bec638a932ca69b1fa98f"></span><code class="descclassname">hdf5::datatype::VLengthArray::</code><code class="descname">VLengthArray</code><span class="sig-paren">(</span><a class="reference internal" href="namespace_hdf5.html#_CPPv2N4hdf512ObjectHandleE" title="hdf5::ObjectHandle">ObjectHandle</a> &amp;&amp;<em>handle</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4hdf58datatype12VLengthArray12VLengthArrayERR12ObjectHandle" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>construct from handle </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N4hdf58datatype12VLengthArray12VLengthArrayERK8Datatype">
+<span id="hdf5::datatype::VLengthArray::VLengthArray__DatatypeCR"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1VLengthArray_1a8d1dcdf12c12941de98fb358045813e5"></span><code class="descclassname">hdf5::datatype::VLengthArray::</code><code class="descname">VLengthArray</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv2N4hdf58datatype8DatatypeE" title="hdf5::datatype::Datatype">Datatype</a> &amp;<em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4hdf58datatype12VLengthArray12VLengthArrayERK8Datatype" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>cosntruct from generic datatype </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Static Functions</p>
+<dl class="function">
+<dt id="_CPPv2N4hdf58datatype12VLengthArray6createERK8Datatype">
+<span id="hdf5::datatype::VLengthArray::create__DatatypeCR"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1VLengthArray_1aff2fef98dc07b176c82510bf47f36151"></span><em class="property">static</em> <a class="reference internal" href="#_CPPv2N4hdf58datatype12VLengthArrayE" title="hdf5::datatype::VLengthArray">VLengthArray</a> <code class="descclassname">hdf5::datatype::VLengthArray::</code><code class="descname">create</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv2N4hdf58datatype8DatatypeE" title="hdf5::datatype::Datatype">Datatype</a> &amp;<em>base_type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4hdf58datatype12VLengthArray6createERK8Datatype" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>constructor </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">base_type</span></code>: the base type for the variable length type </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="compound">
+<h3><code class="xref cpp cpp-class docutils literal"><span class="pre">Compound</span></code><a class="headerlink" href="#compound" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="_CPPv2N4hdf58datatype8CompoundE">
+<span id="hdf5::datatype::Compound"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1Compound"></span><em class="property">class </em></dt>
+<dd><p>compound data type </p>
+<p>A compound data type which can be used for data elements of heterogeneous type like C-structures or a C++ class. </p>
+<p>Inherits from <a class="reference internal" href="#h5cppclasshdf5_1_1datatype_1_1Datatype"><span class="std std-ref">hdf5::datatype::Datatype</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N4hdf58datatype8Compound8CompoundEv">
+<span id="hdf5::datatype::Compound::Compound"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1Compound_1aef1496e9029f3f02a837412b127ef578"></span><code class="descclassname">hdf5::datatype::Compound::</code><code class="descname">Compound</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4hdf58datatype8Compound8CompoundEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>default constructor </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N4hdf58datatype8Compound8CompoundERR12ObjectHandle">
+<span id="hdf5::datatype::Compound::Compound__ObjectHandleRR"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1Compound_1a02a77c75dc6b72961d12614beeb10011"></span><code class="descclassname">hdf5::datatype::Compound::</code><code class="descname">Compound</code><span class="sig-paren">(</span><a class="reference internal" href="namespace_hdf5.html#_CPPv2N4hdf512ObjectHandleE" title="hdf5::ObjectHandle">ObjectHandle</a> &amp;&amp;<em>handle</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4hdf58datatype8Compound8CompoundERR12ObjectHandle" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>construct from handle </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N4hdf58datatype8Compound8CompoundERK8Datatype">
+<span id="hdf5::datatype::Compound::Compound__DatatypeCR"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1Compound_1a020a3238d591a07de8db2557d51ef833"></span><code class="descclassname">hdf5::datatype::Compound::</code><code class="descname">Compound</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv2N4hdf58datatype8DatatypeE" title="hdf5::datatype::Datatype">Datatype</a> &amp;<em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4hdf58datatype8Compound8CompoundERK8Datatype" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>construct from generic datatype </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK4hdf58datatype8CompoundixE6size_t">
+<span id="hdf5::datatype::Compound::subscript-operator__sC"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1Compound_1a1c53819565891e68bacb2aab5a1194ea"></span><a class="reference internal" href="#_CPPv2N4hdf58datatype8DatatypeE" title="hdf5::datatype::Datatype">Datatype</a> <code class="descclassname">hdf5::datatype::Compound::</code><code class="descname">operator[]</code><span class="sig-paren">(</span>size_t <em>index</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK4hdf58datatype8CompoundixE6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>return the datatype for index element </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK4hdf58datatype8CompoundixERKNSt6stringE">
+<span id="hdf5::datatype::Compound::subscript-operator__ssCRC"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1Compound_1af37b9662eac415aba5a4267ee5793515"></span><a class="reference internal" href="#_CPPv2N4hdf58datatype8DatatypeE" title="hdf5::datatype::Datatype">Datatype</a> <code class="descclassname">hdf5::datatype::Compound::</code><code class="descname">operator[]</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>name</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK4hdf58datatype8CompoundixERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>return the datatype for element name </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK4hdf58datatype8Compound11field_indexERKNSt6stringE">
+<span id="hdf5::datatype::Compound::field_index__ssCRC"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1Compound_1a307eed70b47820e23c3407c6ea81e50a"></span>size_t <code class="descclassname">hdf5::datatype::Compound::</code><code class="descname">field_index</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>name</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK4hdf58datatype8Compound11field_indexERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>return the index of a type element </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK4hdf58datatype8Compound16number_of_fieldsEv">
+<span id="hdf5::datatype::Compound::number_of_fieldsC"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1Compound_1a729bb4588847ce486a3ea573799ce387"></span>size_t <code class="descclassname">hdf5::datatype::Compound::</code><code class="descname">number_of_fields</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK4hdf58datatype8Compound16number_of_fieldsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>return the total number of elements of the type </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Static Functions</p>
+<dl class="function">
+<dt id="_CPPv2N4hdf58datatype8Compound6createE6size_t">
+<span id="hdf5::datatype::Compound::create__s"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1Compound_1afd19dd69391d062decf474b1229d9047"></span><em class="property">static</em> <a class="reference internal" href="#_CPPv2N4hdf58datatype8CompoundE" title="hdf5::datatype::Compound">Compound</a> <code class="descclassname">hdf5::datatype::Compound::</code><code class="descname">create</code><span class="sig-paren">(</span>size_t <em>size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4hdf58datatype8Compound6createE6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>constructor </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="float">
+<h3><code class="xref cpp cpp-class docutils literal"><span class="pre">Float</span></code><a class="headerlink" href="#float" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="_CPPv2N4hdf58datatype5FloatE">
+<span id="hdf5::datatype::Float"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1Float"></span><em class="property">class </em></dt>
+<dd><p>Inherits from <a class="reference internal" href="#h5cppclasshdf5_1_1datatype_1_1Datatype"><span class="std std-ref">hdf5::datatype::Datatype</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N4hdf58datatype5Float5FloatEv">
+<span id="hdf5::datatype::Float::Float"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1Float_1aa57ae427df75da47298d460920d1352c"></span><code class="descclassname">hdf5::datatype::Float::</code><code class="descname">Float</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4hdf58datatype5Float5FloatEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>default constructor </p>
+<p>Need this for compliance with STL containers but we can use the default implementation of the compiler. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N4hdf58datatype5Float5FloatERR12ObjectHandle">
+<span id="hdf5::datatype::Float::Float__ObjectHandleRR"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1Float_1a2100d7f8bcf7634c2e0797e4b0bb4145"></span><code class="descclassname">hdf5::datatype::Float::</code><code class="descname">Float</code><span class="sig-paren">(</span><a class="reference internal" href="namespace_hdf5.html#_CPPv2N4hdf512ObjectHandleE" title="hdf5::ObjectHandle">ObjectHandle</a> &amp;&amp;<em>handle</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4hdf58datatype5Float5FloatERR12ObjectHandle" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>constructor </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">handle</span></code>: rvalue reference to an HDF5 object handle </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N4hdf58datatype5Float5FloatERK8Datatype">
+<span id="hdf5::datatype::Float::Float__DatatypeCR"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1Float_1af343c15a13a6f78c5152a31a645b75f6"></span><code class="descclassname">hdf5::datatype::Float::</code><code class="descname">Float</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv2N4hdf58datatype8DatatypeE" title="hdf5::datatype::Datatype">Datatype</a> &amp;<em>datatype</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4hdf58datatype5Float5FloatERK8Datatype" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>constructor </p>
+<p>Conversion constructor which allows creation of a <a class="reference internal" href="#h5cppclasshdf5_1_1datatype_1_1Float"><span class="std std-ref">Float</span></a> type from a generic <a class="reference internal" href="#h5cppclasshdf5_1_1datatype_1_1Datatype"><span class="std std-ref">Datatype</span></a> instance. If datatype does not reference a float datatype an exception is thrown.</p>
+<p><dl class="docutils">
+<dt><strong>Exceptions</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">std::runtime_error</span></code>: in case of a failure </li>
+</ul>
+</dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">datatype</span></code>: reference to a generic datatype instance </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="integer">
+<h3><code class="xref cpp cpp-class docutils literal"><span class="pre">Integer</span></code><a class="headerlink" href="#integer" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="_CPPv2N4hdf58datatype7IntegerE">
+<span id="hdf5::datatype::Integer"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1Integer"></span><em class="property">class </em></dt>
+<dd><p>HDF5 integer datatype. </p>
+<p>Inherits from <a class="reference internal" href="#h5cppclasshdf5_1_1datatype_1_1Datatype"><span class="std std-ref">hdf5::datatype::Datatype</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N4hdf58datatype7Integer7IntegerEv">
+<span id="hdf5::datatype::Integer::Integer"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1Integer_1a83fa11c58e13441d7dfcedc9c6127b80"></span><code class="descclassname">hdf5::datatype::Integer::</code><code class="descname">Integer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4hdf58datatype7Integer7IntegerEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Default constructor. </p>
+<p>We need this for compatability with STL containers. However, we can use the compiler provided default version. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N4hdf58datatype7Integer7IntegerERR12ObjectHandle">
+<span id="hdf5::datatype::Integer::Integer__ObjectHandleRR"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1Integer_1a1d7402ffb41f6605df1bb15a87bbc848"></span><code class="descclassname">hdf5::datatype::Integer::</code><code class="descname">Integer</code><span class="sig-paren">(</span><a class="reference internal" href="namespace_hdf5.html#_CPPv2N4hdf512ObjectHandleE" title="hdf5::ObjectHandle">ObjectHandle</a> &amp;&amp;<em>handle</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4hdf58datatype7Integer7IntegerERR12ObjectHandle" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct from object handle. </p>
+<p>Construct a type from an object handle. The datatype takes full ownership of the handle whose lifetime is thus bound to the lifetime of the type.</p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">handle</span></code>: rvalue reference to a new object handle. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N4hdf58datatype7Integer7IntegerERK8Datatype">
+<span id="hdf5::datatype::Integer::Integer__DatatypeCR"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1Integer_1ac947d8fac7c615790afec4db38b2d554"></span><code class="descclassname">hdf5::datatype::Integer::</code><code class="descname">Integer</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv2N4hdf58datatype8DatatypeE" title="hdf5::datatype::Datatype">Datatype</a> &amp;<em>datatype</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4hdf58datatype7Integer7IntegerERK8Datatype" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copy construction from a <a class="reference internal" href="#h5cppclasshdf5_1_1datatype_1_1Datatype"><span class="std std-ref">Datatype</span></a> instance. </p>
+<p>This copy constructor creates an integer type from an instance of <a class="reference internal" href="#h5cppclasshdf5_1_1datatype_1_1Datatype"><span class="std std-ref">Datatype</span></a>. The datatype has to satisfy two conditions</p>
+<p><ul class="simple">
+<li>it must be a valid object (<a class="reference internal" href="#h5cppclasshdf5_1_1datatype_1_1Datatype_1af7586202854365e8f70451445a1c7267"><span class="std std-ref">is_valid()</span></a> shoudld return true) </li>
+<li>it must reference an integer datatype.</li>
+</ul>
+
+Failure to satify one of the above conditions will cause an exception.</p>
+<p><dl class="docutils">
+<dt><strong>Exceptions</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">std::runtime_error</span></code>: in case of any failure</li>
+</ul>
+</dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">datatype</span></code>: reference to a <a class="reference internal" href="#h5cppclasshdf5_1_1datatype_1_1Datatype"><span class="std std-ref">Datatype</span></a> instance </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK4hdf58datatype7Integer9is_signedEv">
+<span id="hdf5::datatype::Integer::is_signedC"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1Integer_1a7dc33b270f1c7ea4b66a6d746f582ad7"></span><em class="property">virtual</em> bool <code class="descclassname">hdf5::datatype::Integer::</code><code class="descname">is_signed</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK4hdf58datatype7Integer9is_signedEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Retrieves the sign type for an integer type. </p>
+<p><dl class="docutils">
+<dt><strong>Exceptions</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">std::runtime_error</span></code>: in case of a failure </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK4hdf58datatype7Integer11make_signedEb">
+<span id="hdf5::datatype::Integer::make_signed__bC"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1Integer_1abbbc719c556f54cf4847170203e4d21b"></span><em class="property">virtual</em> void <code class="descclassname">hdf5::datatype::Integer::</code><code class="descname">make_signed</code><span class="sig-paren">(</span>bool <em>sign</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK4hdf58datatype7Integer11make_signedEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sets the sign property for an integer type. </p>
+<p><dl class="docutils">
+<dt><strong>Exceptions</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">std::runtime_error</span></code>: in case of a failure </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="string">
+<h3><code class="xref cpp cpp-class docutils literal"><span class="pre">String</span></code><a class="headerlink" href="#string" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="_CPPv2N4hdf58datatype6StringE">
+<span id="hdf5::datatype::String"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1String"></span><em class="property">class </em></dt>
+<dd><p>string datatype </p>
+<p>This type can be used to represent fixed length or variable length strings. </p>
+<p>Inherits from <a class="reference internal" href="#h5cppclasshdf5_1_1datatype_1_1Datatype"><span class="std std-ref">hdf5::datatype::Datatype</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N4hdf58datatype6String6StringEv">
+<span id="hdf5::datatype::String::String"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1String_1a30f60163ff60d8b99d346ea1fec2e98c"></span><code class="descclassname">hdf5::datatype::String::</code><code class="descname">String</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4hdf58datatype6String6StringEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>default constructor </p>
+<p>We need this for STL containers but can rely on the default compiler implementation for now. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N4hdf58datatype6String6StringERR12ObjectHandle">
+<span id="hdf5::datatype::String::String__ObjectHandleRR"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1String_1ae68627ab24232bd2a3fdf51c6c25885a"></span><code class="descclassname">hdf5::datatype::String::</code><code class="descname">String</code><span class="sig-paren">(</span><a class="reference internal" href="namespace_hdf5.html#_CPPv2N4hdf512ObjectHandleE" title="hdf5::ObjectHandle">ObjectHandle</a> &amp;&amp;<em>handle</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4hdf58datatype6String6StringERR12ObjectHandle" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>construct from handle </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N4hdf58datatype6String6StringERK8Datatype">
+<span id="hdf5::datatype::String::String__DatatypeCR"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1String_1ad45fe4b388c7977becf09d2c434a5331"></span><code class="descclassname">hdf5::datatype::String::</code><code class="descname">String</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv2N4hdf58datatype8DatatypeE" title="hdf5::datatype::Datatype">Datatype</a> &amp;<em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4hdf58datatype6String6StringERK8Datatype" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>construct from generic datatype instance </p>
+<p><dl class="docutils">
+<dt><strong>Exceptions</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">std::runtime_error</span></code>: if the datatype is not a string type </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK4hdf58datatype6String18is_variable_lengthEv">
+<span id="hdf5::datatype::String::is_variable_lengthC"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1String_1a747f84efc8a205dfd1fb555f2d8071bf"></span>bool <code class="descclassname">hdf5::datatype::String::</code><code class="descname">is_variable_length</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK4hdf58datatype6String18is_variable_lengthEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>return true if type is a variable length string </p>
+<p><dl class="docutils">
+<dt><strong>Exceptions</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">std::runtime_error</span></code>: in case of a failure </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK4hdf58datatype6String8encodingEv">
+<span id="hdf5::datatype::String::encodingC"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1String_1af9e00771ec508dcbf2e7131ae7785392"></span><a class="reference internal" href="#_CPPv2N4hdf58datatype17CharacterEncodingE" title="hdf5::datatype::CharacterEncoding">CharacterEncoding</a> <code class="descclassname">hdf5::datatype::String::</code><code class="descname">encoding</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK4hdf58datatype6String8encodingEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>get current character encoding for the string </p>
+<p><dl class="docutils">
+<dt><strong>Exceptions</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">std::runtime_error</span></code>: in case of a failure </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N4hdf58datatype6String8encodingE17CharacterEncoding">
+<span id="hdf5::datatype::String::encoding__CharacterEncoding"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1String_1a8348b9ea502ef80241b3b5cbb2cfc4c4"></span>void <code class="descclassname">hdf5::datatype::String::</code><code class="descname">encoding</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N4hdf58datatype17CharacterEncodingE" title="hdf5::datatype::CharacterEncoding">CharacterEncoding</a> <em>cset</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4hdf58datatype6String8encodingE17CharacterEncoding" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>set current character encoding </p>
+<p><dl class="docutils">
+<dt><strong>Exceptions</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">std::runtime_error</span></code>: in case of a failure </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK4hdf58datatype6String7paddingEv">
+<span id="hdf5::datatype::String::paddingC"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1String_1abe8a361678e4039b31fe8f6310cc6d11"></span><a class="reference internal" href="#_CPPv2N4hdf58datatype9StringPadE" title="hdf5::datatype::StringPad">StringPad</a> <code class="descclassname">hdf5::datatype::String::</code><code class="descname">padding</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK4hdf58datatype6String7paddingEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>get the current string padding </p>
+<p><dl class="docutils">
+<dt><strong>Exceptions</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">std::runtime_error</span></code>: in case of a failure </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N4hdf58datatype6String7paddingE9StringPad">
+<span id="hdf5::datatype::String::padding__StringPad"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1String_1a9e65788ce6f63aaba29c01aa1453d0f4"></span>void <code class="descclassname">hdf5::datatype::String::</code><code class="descname">padding</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N4hdf58datatype9StringPadE" title="hdf5::datatype::StringPad">StringPad</a> <em>strpad</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4hdf58datatype6String7paddingE9StringPad" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>set the string padding for the type </p>
+<p><dl class="docutils">
+<dt><strong>Exceptions</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">std::runtime_error</span></code>: in case of a failure </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK4hdf58datatype6String4sizeEv">
+<span id="hdf5::datatype::String::sizeC"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1String_1acb5c6c8bef44d686c524ae8a77ada080"></span>size_t <code class="descclassname">hdf5::datatype::String::</code><code class="descname">size</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK4hdf58datatype6String4sizeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>get current size of the string type </p>
+<p><dl class="docutils">
+<dt><strong>Exceptions</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">std::runtime_error</span></code>: in case of a failure </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK4hdf58datatype6String4sizeE6size_t">
+<span id="hdf5::datatype::String::size__sC"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1String_1a277cb20bdb0d4568b18cf6d9c74e0902"></span>void <code class="descclassname">hdf5::datatype::String::</code><code class="descname">size</code><span class="sig-paren">(</span>size_t <em>size</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK4hdf58datatype6String4sizeE6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>set the string size (number of characters) </p>
+<p>There are two conditions which must be met in order for this function to succeed:</p>
+<p><ul class="simple">
+<li>the <a class="reference internal" href="#h5cppclasshdf5_1_1datatype_1_1String"><span class="std std-ref">String</span></a> instance must not be a variable length type </li>
+<li>the size must not be 0</li>
+</ul>
+<dl class="docutils">
+<dt><strong>Exceptions</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">std::runtime_error</span></code>: in case of a failure </li>
+</ul>
+</dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">size</span></code>: the new size for the fixed length string type </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Static Functions</p>
+<dl class="function">
+<dt id="_CPPv2N4hdf58datatype6String8variableEv">
+<span id="hdf5::datatype::String::variable"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1String_1a8a0dad0e2286856bc12ca381be66eba7"></span><em class="property">static</em> <a class="reference internal" href="#_CPPv2N4hdf58datatype6StringE" title="hdf5::datatype::String">String</a> <code class="descclassname">hdf5::datatype::String::</code><code class="descname">variable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4hdf58datatype6String8variableEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>construct variable-length string </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N4hdf58datatype6String5fixedE6size_t">
+<span id="hdf5::datatype::String::fixed__s"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1String_1afe8638d4063196982b95fe37204b0206"></span><em class="property">static</em> <a class="reference internal" href="#_CPPv2N4hdf58datatype6StringE" title="hdf5::datatype::String">String</a> <code class="descclassname">hdf5::datatype::String::</code><code class="descname">fixed</code><span class="sig-paren">(</span>size_t <em>size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4hdf58datatype6String5fixedE6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>construct fixed-length string </p>
+<p>Return an instance of <a class="reference internal" href="#h5cppclasshdf5_1_1datatype_1_1String"><span class="std std-ref">String</span></a> for a fixed length string. The size of the string must not be 0 as this would not make any sense at all.</p>
+<p><dl class="docutils">
+<dt><strong>Exceptions</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">std::runtime_error</span></code>: in the case of a failure </li>
+</ul>
+</dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">size</span></code>: the size of the new string type </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="type-traits">
+<h2>Type traits<a class="headerlink" href="#type-traits" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt>
+<span class="target" id="h5cppclasshdf5_1_1datatype_1_1TypeTrait"></span><em class="property">template </em>&lt;typename <em>T</em>&gt;</dt>
+<dt id="_CPPv2N4hdf58datatype9TypeTraitE">
+<span id="hdf5::datatype::TypeTrait"></span><em class="property">class </em></dt>
+<dd><p>trait to create HDF5 datatypes </p>
+<p>This trait provides a static function which creates a new HDF5 data type for a particular C++ type.</p>
+<p>Specializations for this template exist for the following native types</p>
+<p><code class="docutils literal"><span class="pre">char</span></code>, <code class="docutils literal"><span class="pre">unsigned</span></code> char, <code class="docutils literal"><span class="pre">singed</span></code> char  <code class="docutils literal"><span class="pre">double</span></code> </p>
+<p><dl class="docutils">
+<dt><strong>Template Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">T</span></code>: type for which to create a new HDF5 data type </li>
+</ul>
+</dd>
+</dl>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Types</p>
+<dl class="type">
+<dt id="_CPPv2IEN4hdf58datatype9TypeTraitI1TE9TypeClassE">
+<span class="target" id="h5cppclasshdf5_1_1datatype_1_1TypeTrait_1a1f4c0e26447cbd18492b096498d51696"></span><em class="property">using </em><em class="property">using </em><code class="descclassname">hdf5::datatype::TypeTrait&lt;T&gt;::</code><code class="descname">TypeClass</code> = <a class="reference internal" href="#_CPPv2N4hdf58datatype8DatatypeE" title="hdf5::datatype::Datatype">Datatype</a><a class="headerlink" href="#_CPPv2IEN4hdf58datatype9TypeTraitI1TE9TypeClassE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>subtype of <a class="reference internal" href="#h5cppclasshdf5_1_1datatype_1_1Datatype"><span class="std std-ref">Datatype</span></a> which will be used </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Static Functions</p>
+<dl class="function">
+<dt id="_CPPv2N4hdf58datatype9TypeTrait6createERK1T">
+<span id="hdf5::datatype::TypeTrait::create__TCR"></span><span class="target" id="h5cppclasshdf5_1_1datatype_1_1TypeTrait_1a3e06e286e3aeafeef12992ee316d784b"></span><em class="property">static</em> TypeClass <code class="descclassname">hdf5::datatype::TypeTrait::</code><code class="descname">create</code><span class="sig-paren">(</span><em class="property">const</em> T&amp; = T()<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N4hdf58datatype9TypeTrait6createERK1T" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>create the new type instance </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="namespace_file.html" title="Namespace hdf5::file"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="namespace_dataspace.html" title="Namespace hdf5::dataspace"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">h5cpp 0.3.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >API reference</a> &#187;</li> 
+      </ul>
+    </div>
+<li>generated on 2019-04-04 02:04:20 from master (32e7b6d)</li>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Deutsches Elektronen-Synchrotron, European Spallation Source ERIC; generated on 2019-04-04 02:04:20 from master (32e7b6d).
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
+    </div>
+
+  </body>
+</html>

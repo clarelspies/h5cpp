@@ -1,0 +1,5 @@
+<map id="hdf5::filter::Filter" name="hdf5::filter::Filter">
+<area shape="rect" id="node2" href="$classhdf5_1_1filter_1_1Deflate.html" title="hdf5::filter::Deflate" alt="" coords="5,80,136,107"/>
+<area shape="rect" id="node3" href="$classhdf5_1_1filter_1_1Fletcher32.html" title="Fletcher32 checksum filter. " alt="" coords="160,80,309,107"/>
+<area shape="rect" id="node4" href="$classhdf5_1_1filter_1_1Shuffle.html" title="hdf5::filter::Shuffle" alt="" coords="334,80,463,107"/>
+</map>

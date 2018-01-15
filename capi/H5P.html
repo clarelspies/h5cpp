@@ -1,0 +1,317 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Wrapper coverage of H5P functions &#8212; h5cpp 0.3.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.3.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="nav-item nav-item-0"><a href="../index.html">h5cpp 0.3.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/capi/H5P.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="wrapper-coverage-of-h5p-functions">
+<span id="capi-h5p"></span><h1>Wrapper coverage of H5P functions<a class="headerlink" href="#wrapper-coverage-of-h5p-functions" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>H5Padd_merge_committed_dtype_path</li>
+<li>H5Pall_filters_avail</li>
+<li><strong>H5Pclose</strong></li>
+<li><strong>H5Pclose_class</strong></li>
+<li><strong>H5Pcopy</strong></li>
+<li>H5Pcopy_prop</li>
+<li><strong>H5Pcreate</strong></li>
+<li>H5Pcreate_class</li>
+<li>H5Pdecode</li>
+<li>H5Pencode</li>
+<li><strong>H5Pequal</strong></li>
+<li>H5Pexist</li>
+<li><strong>H5Pfill_value_defined</strong></li>
+<li>H5Pfree_merge_committed_dtype_paths</li>
+<li><strong>H5Pget</strong></li>
+<li>H5Pget_alignment</li>
+<li>H5Pget_all_coll_metadata_ops</li>
+<li><strong>H5Pget_alloc_time</strong></li>
+<li>H5Pget_append_flush</li>
+<li><strong>H5Pget_attr_creation_order</strong></li>
+<li><strong>H5Pget_attr_phase_change</strong></li>
+<li>H5Pget_btree_ratios</li>
+<li>H5Pget_buffer</li>
+<li>H5Pget_cache</li>
+<li><strong>H5Pget_char_encoding</strong></li>
+<li><strong>H5Pget_chunk</strong></li>
+<li><strong>H5Pget_chunk_cache</strong></li>
+<li>H5Pget_chunk_opts</li>
+<li><strong>H5Pget_class</strong></li>
+<li><strong>H5Pget_class_name</strong></li>
+<li>H5Pget_class_parent</li>
+<li>H5Pget_coll_metadata_write</li>
+<li><strong>H5Pget_copy_object</strong></li>
+<li>H5Pget_core_write_tracking</li>
+<li><strong>H5Pget_create_intermediate_group</strong></li>
+<li>H5Pget_data_transform</li>
+<li>H5Pget_driver</li>
+<li>H5Pget_driver_info</li>
+<li>H5Pget_dxpl_mpio   ||</li>
+<li>H5Pget_edc_check</li>
+<li>H5Pget_efile_prefix</li>
+<li>H5Pget_elink_acc_flags</li>
+<li>H5Pget_elink_cb</li>
+<li>H5Pget_elink_fapl</li>
+<li>H5Pget_elink_file_cache_size</li>
+<li>H5Pget_elink_prefix</li>
+<li><strong>H5Pget_est_link_info</strong></li>
+<li>H5Pget_external</li>
+<li>H5Pget_external_count</li>
+<li>H5Pget_evict_on_close</li>
+<li>H5Pget_family_offset</li>
+<li>H5Pget_fapl_core</li>
+<li>H5Pget_fapl_direct</li>
+<li>H5Pget_fapl_family</li>
+<li>H5Pget_fapl_mpio</li>
+<li>H5Pget_fapl_mpiposix</li>
+<li>H5Pget_fapl_multi</li>
+<li><strong>H5Pget_fclose_degree</strong></li>
+<li>H5Pget_file_image</li>
+<li>H5Pget_file_image_callbacks</li>
+<li><strong>H5Pget_file_space_page_size</strong></li>
+<li><strong>H5Pget_file_space_strategy</strong></li>
+<li><strong>H5Pget_fill_time</strong></li>
+<li><strong>H5Pget_fill_value</strong></li>
+<li>H5Pget_filter</li>
+<li>H5Pget_filter2</li>
+<li>H5Pget_filter_by_id</li>
+<li>H5Pget_filter_by_id2</li>
+<li>H5Pget_gc_references</li>
+<li>H5Pget_hyper_vector_size</li>
+<li>H5Pget_istore_k               H5Pget_layout</li>
+<li><strong>H5Pget_libver_bounds</strong></li>
+<li><strong>H5Pget_link_creation_order</strong></li>
+<li><strong>H5Pget_link_phase_change</strong></li>
+<li><strong>H5Pget_local_heap_size_hint</strong></li>
+<li>H5Pget_mcdt_search_cb</li>
+<li>H5Pget_mdc_config</li>
+<li>H5Pget_mdc_image_config</li>
+<li>H5Pget_mdc_log_options</li>
+<li>H5Pget_meta_block_size</li>
+<li>H5Pget_metadata_read_attempts</li>
+<li>H5Pget_mpio_actual_chunk_opt_mode</li>
+<li>H5Pget_mpio_actual_io_mode</li>
+<li>H5Pget_mpio_no_collective_cause</li>
+<li>H5Pget_multi_type</li>
+<li>H5Pget_nfilters</li>
+<li><strong>H5Pget_nlinks</strong></li>
+<li>H5Pget_nprops</li>
+<li>H5Pget_page_buffer_size</li>
+<li><strong>H5Pget_obj_track_times</strong></li>
+<li>H5Pget_object_flush_cb</li>
+<li><strong>H5Pget_shared_mesg_index</strong></li>
+<li><strong>H5Pget_shared_mesg_nindexes</strong></li>
+<li><strong>H5Pget_shared_mesg_phase_change</strong></li>
+<li>H5Pget_sieve_buf_size</li>
+<li><strong>H5Pget_size</strong></li>
+<li><strong>H5Pget_sizes</strong></li>
+<li>H5Pget_small_data_block_size</li>
+<li><strong>H5Pget_sym_k</strong></li>
+<li>H5Pget_type_conv_cb</li>
+<li><strong>H5Pget_userblock</strong></li>
+<li><strong>H5Pget_version</strong></li>
+<li>H5Pget_virtual_count</li>
+<li>H5Pget_virtual_dsetname</li>
+<li>H5Pget_virtual_filename</li>
+<li>H5Pget_virtual_printf_gap</li>
+<li>H5Pget_virtual_srcspace</li>
+<li><strong>H5Pget_virtual_view</strong></li>
+<li>H5Pget_virtual_vspace</li>
+<li>H5Pget_vlen_mem_manager</li>
+<li>H5Pinsert</li>
+<li>H5Pinsert2</li>
+<li>H5Pisa_class</li>
+<li>H5Piterate</li>
+<li>H5Pmodify_filter</li>
+<li>H5Pregister</li>
+<li>H5Pregister2</li>
+<li>H5Premove</li>
+<li>H5Premove_filter</li>
+<li><strong>H5Pset</strong></li>
+<li>H5Pset_alignment</li>
+<li>H5Pset_all_coll_metadata_ops</li>
+<li><strong>H5Pset_alloc_time</strong></li>
+<li>H5Pset_append_flush</li>
+<li><strong>H5Pset_attr_creation_order</strong></li>
+<li><strong>H5Pset_attr_phase_change</strong></li>
+<li>H5Pset_btree_ratios</li>
+<li>H5Pset_buffer</li>
+<li>H5Pset_cache</li>
+<li><strong>H5Pset_char_encoding</strong></li>
+<li><strong>H5Pset_chunk</strong></li>
+<li><strong>H5Pset_chunk_cache</strong></li>
+<li>H5Pset_chunk_opts</li>
+<li>H5Pset_coll_metadata_write</li>
+<li><strong>H5Pset_copy_object</strong></li>
+<li>H5Pset_core_write_tracking</li>
+<li><strong>H5Pset_create_intermediate_group</strong></li>
+<li>H5Pset_data_transform</li>
+<li><strong>H5Pset_deflate</strong></li>
+<li>H5Pset_driver</li>
+<li><strong>H5Pset_dxpl_mpio</strong></li>
+<li><strong>H5Pset_dxpl_mpio_chunk_opt</strong></li>
+<li>H5Pset_dxpl_mpio_chunk_opt_num</li>
+<li>H5Pset_dxpl_mpio_chunk_opt_ratio</li>
+<li>H5Pset_dxpl_mpio_collective_opt</li>
+<li>H5Pset_edc_check</li>
+<li>H5Pset_efile_prefix</li>
+<li>H5Pset_elink_acc_flags</li>
+<li>H5Pset_elink_cb</li>
+<li>H5Pset_elink_fapl</li>
+<li>H5Pset_elink_file_cache_size</li>
+<li><strong>H5Pset_elink_prefix</strong></li>
+<li><strong>H5Pset_est_link_info</strong></li>
+<li>H5Pset_external</li>
+<li>H5Pset_evict_on_close</li>
+<li>H5Pset_family_offset</li>
+<li><strong>H5Pset_fapl_core</strong></li>
+<li>H5Pset_fapl_family</li>
+<li><strong>H5Pset_fapl_direct</strong></li>
+<li>H5Pset_fapl_log</li>
+<li><strong>H5Pset_fapl_mpio</strong></li>
+<li>H5Pset_fapl_mpiposix</li>
+<li>H5Pset_fapl_multi</li>
+<li><strong>H5Pset_fapl_sec2</strong></li>
+<li>H5Pset_fapl_split</li>
+<li>H5Pset_fapl_stdio</li>
+<li>H5Pset_fapl_windows</li>
+<li><strong>H5Pset_fclose_degree</strong></li>
+<li>H5Pset_file_image</li>
+<li>H5Pset_file_image_callbacks</li>
+<li><strong>H5Pset_file_space_page_size</strong></li>
+<li><strong>H5Pset_file_space_strategy</strong></li>
+<li><strong>H5Pset_fill_time</strong></li>
+<li><strong>H5Pset_fill_value</strong></li>
+<li>H5Pset_filter</li>
+<li>H5Pset_filter_callback</li>
+<li><strong>H5Pset_fletcher32</strong></li>
+<li>H5Pset_gc_references</li>
+<li>H5Pset_hyper_vector_size</li>
+<li><strong>H5Pset_istore_k</strong></li>
+<li><strong>H5Pset_layout</strong></li>
+<li><strong>H5Pset_libver_bounds</strong></li>
+<li><strong>H5Pset_link_creation_order</strong></li>
+<li><strong>H5Pset_link_phase_change</strong></li>
+<li><strong>H5Pset_local_heap_size_hint</strong></li>
+<li>H5Pset_mcdt_search_cb</li>
+<li>H5Pset_mdc_config</li>
+<li>H5Pset_mdc_image_config</li>
+<li>H5Pset_mdc_log_options</li>
+<li>H5Pset_meta_block_size</li>
+<li>H5Pset_metadata_read_attempts</li>
+<li>H5Pset_multi_type</li>
+<li>H5Pset_nbit</li>
+<li><strong>H5Pset_nlinks</strong></li>
+<li>H5Pset_page_buffer_size</li>
+<li><strong>H5Pset_obj_track_times</strong></li>
+<li>H5Pset_object_flush_cb</li>
+<li>H5Pset_scaleoffset</li>
+<li><strong>H5Pset_shared_mesg_index</strong></li>
+<li><strong>H5Pset_shared_mesg_nindexes</strong></li>
+<li><strong>H5Pset_shared_mesg_phase_change</strong></li>
+<li><strong>H5Pset_shuffle</strong></li>
+<li>H5Pset_sieve_buf_size</li>
+<li><strong>H5Pset_sizes</strong></li>
+<li>H5Pset_small_data_block_size</li>
+<li><strong>H5Pset_sym_k</strong></li>
+<li>H5Pset_szip</li>
+<li>H5Pset_type_conv_cb</li>
+<li><strong>H5Pset_userblock</strong></li>
+<li><strong>H5Pset_virtual</strong></li>
+<li><strong>H5Pset_virtual_view</strong></li>
+<li>H5Pset_virtual_printf_gap</li>
+<li>H5Pset_vlen_mem_manager</li>
+<li>H5Punregister</li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="nav-item nav-item-0"><a href="../index.html">h5cpp 0.3.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+<li>generated on 2019-04-04 02:04:20 from master (32e7b6d)</li>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Deutsches Elektronen-Synchrotron, European Spallation Source ERIC; generated on 2019-04-04 02:04:20 from master (32e7b6d).
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
+    </div>
+
+  </body>
+</html>

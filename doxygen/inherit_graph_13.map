@@ -1,0 +1,10 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classhdf5_1_1datatype_1_1Datatype.html" title="base class for all data types " alt="" coords="5,157,172,184"/>
+<area shape="rect" id="node2" href="$classhdf5_1_1datatype_1_1Array.html" title="array datatype " alt="" coords="244,5,388,32"/>
+<area shape="rect" id="node3" href="$classhdf5_1_1datatype_1_1Compound.html" title="compound data type " alt="" coords="228,56,404,83"/>
+<area shape="rect" id="node4" href="$classhdf5_1_1datatype_1_1Enum.html" title="compound data type " alt="" coords="243,107,389,133"/>
+<area shape="rect" id="node5" href="$classhdf5_1_1datatype_1_1Float.html" title="hdf5::datatype::Float" alt="" coords="245,157,387,184"/>
+<area shape="rect" id="node6" href="$classhdf5_1_1datatype_1_1Integer.html" title="HDF5 integer datatype. " alt="" coords="239,208,393,235"/>
+<area shape="rect" id="node7" href="$classhdf5_1_1datatype_1_1String.html" title="string datatype " alt="" coords="243,259,389,285"/>
+<area shape="rect" id="node8" href="$classhdf5_1_1datatype_1_1VLengthArray.html" title="variable length array type " alt="" coords="220,309,412,336"/>
+</map>
