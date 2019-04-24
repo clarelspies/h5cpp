@@ -67,15 +67,6 @@ add_subdirectory(doc)
 install(DIRECTORY examples
         DESTINATION ${CMAKE_INSTALL_DOCDIR})
 
-#=============================================================================
-# unit tests if GTest if present
-#=============================================================================
-include(${EXTRA_MODULES_DIR}/FindGTestFix.cmake)
-if(GTest_FOUND)
-  add_subdirectory(test)
-else()
-  message(WARNING "GTest not found. No tests will be built.")
-endif()
 
 #=============================================================================
 # create package file
